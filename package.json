@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "fsevents": "^2.0.7",
     "js-joda": "^1.11.0",
     "js-joda-locale": "^1.1.0-pre6",
     "js-joda-timezone": "^2.1.1",
