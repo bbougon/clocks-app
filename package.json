@@ -38,6 +38,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "https://clocks-api.herokuapp.com",
   "main": "index.js",
   "author": "Bertrand Bougon <bertrand.bougon@gmail.com>",
   "license": "MIT"
