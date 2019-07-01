@@ -1,0 +1,17 @@
+.container {
+    padding: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-gap: 10px;
+}
+
+.zone {
+    grid-column: 1;
+}
+
+.clock {
+    grid-column: 2/3;
+}

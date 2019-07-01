@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "fsevents": "^2.0.7",
+    "js-joda": "^1.11.0",
+    "js-joda-locale": "^1.1.0-pre6",
+    "js-joda-timezone": "^2.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "yarn-install": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "author": "Bertrand Bougon <bertrand.bougon@gmail.com>",
+  "license": "MIT"
 }
