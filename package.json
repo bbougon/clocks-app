@@ -42,5 +42,12 @@
   "main": "index.js",
   "author": "Bertrand Bougon <bertrand.bougon@gmail.com>",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "@testing-library/react": "^8.0.4",
+    "async": "^3.1.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest-dom": "^3.5.0",
+    "onchange": "^6.0.0"
+  }
 }

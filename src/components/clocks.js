@@ -1,63 +1,43 @@
 import React from "react";
 import 'js-joda-timezone';
 import './clocks.css';
-import {DateTimeFormatter, ZonedDateTime} from 'js-joda';
-
-class Clock {
-    constructor(data) {
-        this._date = ZonedDateTime.parse(data._date)
-            .format(DateTimeFormatter.ofPattern('MM/dd/yyyy HH:mm'));
-        this._zoneId = data._zoneId;
-    }
-
-}
 
 class Clocks extends React.Component {
 
-    state = {
-        clocks: []
-    };
+    constructor(props) {
+        super(props);
+        this.state = {clocks: []};
+    }
 
     componentDidMount() {
-        fetch('https://clocks-api.herokuapp.com/clocks')
-            .then(res => res.json())
-            .then((data) => {
-                let clocks = data.map((clock) => {
-                    return new Clock(clock);
-                });
-                this.setState({clocks: clocks})
-            })
-            .catch(console.log)
+        this.props.repositories.clocks().getAll()
+            .then((clocks) => {
+                this.setState({clocks: clocks});
+            });
     }
 
 
     render() {
         return (
-            <ClocksTemplate clocks={this.state.clocks}/>
+            <div className="container">
+                <center><h1>Clocks</h1></center>
+                <div className="grid">
+                    {this.state.clocks.map((clock, index) => (
+                        <>
+                            <div className="zone">
+                                {clock._zoneId}
+                            </div>
+
+                            <div className="clock">
+                                {clock._date}
+                            </div>
+                        </>
+                    ))}
+                </div>
+            </div>
         )
     }
 }
 
-const ClocksTemplate = ({clocks}) => {
-
-    return (
-        <div className="container">
-            <center><h1>Clocks</h1></center>
-            <div className="grid">
-                {clocks.map((clock, index) => (
-                    <>
-                        <div className="zone" key={index}>
-                            {clock._zoneId}
-                        </div>
-
-                        <div className="clock">
-                            {clock._date}
-                        </div>
-                    </>
-                ))}
-            </div>
-        </div>
-    )
-};
 
 export default Clocks;
