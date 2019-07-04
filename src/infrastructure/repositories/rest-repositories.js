@@ -1,4 +1,4 @@
-import {ClockRepository} from "./clock-repository";
+import {ClockRepository} from "../../domain/clock-repository";
 import {RestClockStore} from "./rest-clock-store";
 
 export class RESTRepositories {

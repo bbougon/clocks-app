@@ -1,6 +1,7 @@
 import React from "react";
 import 'js-joda-timezone';
 import './clocks.css';
+import ListElement from "./list-element";
 
 class Clocks extends React.Component {
 
@@ -23,15 +24,12 @@ class Clocks extends React.Component {
                 <center><h1>Clocks</h1></center>
                 <div className="grid">
                     {this.state.clocks.map((clock, index) => (
-                        <>
-                            <div className="zone">
-                                {clock._zoneId}
-                            </div>
-
-                            <div className="clock">
-                                {clock._date}
-                            </div>
-                        </>
+                        <ListElement key={index} data={
+                            [
+                                {value: clock._zoneId, className: 'zone'},
+                                {value: clock._date, className: 'clock'}
+                            ]}
+                        />
                     ))}
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import {MemoryStore} from "./memory-store";
-import {ClockRepository} from "../clock-repository";
+import {ClockRepository} from "../../../domain/clock-repository";
 
 export class MemoryRepositories {
 
