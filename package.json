@@ -44,7 +44,7 @@
   "license": "MIT",
   "devDependencies": {
     "@testing-library/react": "^8.0.4",
-    "async": "^3.1.0",
+    "async": "^3.2.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest-dom": "^3.5.0",
